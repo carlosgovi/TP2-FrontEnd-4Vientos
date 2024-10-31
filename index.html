@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Contactanos</h1>
+        <form id="contactForm" >
+            <h2>¡Mandanos tu consulta!</h2>
+            
+            <label for="name">Tu nombre</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Tu email</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Tu teléfono</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required title="Debe contener solo números y 10 dígitos">
+            
+            <label for="query">Tu consulta</label>
+            <textarea id="query" name="query" rows="4" minlength="10" maxlength="200" required></textarea>
+            
+            <label for="heardFrom">¿Cómo escuchaste de nosotros?</label>
+            <select id="heardFrom" name="heardFrom" required>
+                <option value="Conocidos">Conocidos</option>
+                <option value="Redes Sociales">Redes Sociales</option>
+                <option value="Publicidad">Publicidad</option>
+                <option value="Otro">Otro</option>
+            </select>
+            
+            <p>¿Cómo deseas que te contactemos?</p>
+            <label><input type="radio" name="contactMethod" value="Teléfono" required> Teléfono</label>
+            <label><input type="radio" name="contactMethod" value="Email"> Email</label>
+            <label><input type="radio" name="contactMethod" value="Whatsapp"> Whatsapp</label>
+            <label><input type="checkbox" name="contactMethod" value="Socio"> Soy socio de la biblioteca</label>
+            
+            <div class="buttons">
+                <button type="reset">Limpiar</button>
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
